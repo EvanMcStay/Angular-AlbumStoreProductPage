@@ -8,7 +8,6 @@ import { ProductService } from '../product.service';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  // Stores the value of the chained subscribe method
   albumInfo;
 
   // Good practice to inject an instance of a service (i.e ProductService) into the constructor of a class.
