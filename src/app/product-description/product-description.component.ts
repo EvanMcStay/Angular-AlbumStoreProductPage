@@ -14,8 +14,6 @@ export class ProductDescriptionComponent implements OnInit {
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    // Call the product service's getAlbum() method and pass in 1.
-    // Then chain the subscribe method to get the response (in JSON) which is stored inside the albumInfo class variable.
     this._productService.getAlbum(1)
       .subscribe(response => this.albumInfo = response);
   }
