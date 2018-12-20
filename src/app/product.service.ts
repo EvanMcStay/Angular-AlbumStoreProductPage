@@ -12,9 +12,9 @@ export class ProductService {
   // Good practice to inject an instance of a service (i.e Http) into the constructor of a class.
   constructor(private _http: Http) { }
 
-  // Return the result of a HTTP GET request mapped as JSON.
+  // Return the result of a HTTP GET request mapped as JSON of type Album.
   getAlbum(id: number): Observable<Album> {
-    // Issues an HTTP call which is then chained and mapped as JSON.
+    // Issues an HTTP call which is then chained and mapped as JSON which is casted as type Album.
     return this._http.get(this._albumUrl).map((response) => <Album>response.json());
   }
 }

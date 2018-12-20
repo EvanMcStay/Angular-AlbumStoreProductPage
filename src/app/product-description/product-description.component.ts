@@ -9,7 +9,8 @@ import { Album } from '../album';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  // Stores the value of the chained subscribe method
+  // Stores the value of the chained subscribe method.
+  // The Album interface is used here to define the data that albumInfo can store.
   albumInfo: Album;
 
   // Good practice to inject an instance of a service (i.e ProductService) into the constructor of a class.
