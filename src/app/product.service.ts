@@ -13,8 +13,6 @@ export class ProductService {
   // Return the result of a HTTP GET request mapped as JSON.
   getAlbum(id: number) {
     // Issues an HTTP call which is then chained and mapped as JSON.
-    return this._http.get(this._albumUrl)
-      .map((response) => response.json());
-
+    return this._http.get(this._albumUrl).map((response) => response.json());
   }
 }
