@@ -7,12 +7,16 @@ export class ProductService {
 
   private _albumUrl = '../assets/album.json';
 
-  // Good practice to inject an instance of a service (i.e Http and Response) into the constructor of a class.
+  // Good practice to inject an instance of a service (i.e Http) into the constructor of a class.
   constructor(private _http: Http) { }
 
-  // Return the result of a HTTP GET request mapped as JSON.
-  getAlbum(id: number) {
-    // Issues an HTTP call which is then chained and mapped as JSON.
+  // // Return the result of a HTTP GET request mapped as JSON.
+  // getAlbum(id: number) {
+  //   // Issues an HTTP call which is then chained and mapped as JSON.
+  //   return this._http.get(this._albumUrl).map((response) => response.json());
+  // }
+
+    getAlbum(id: number) {
     return this._http.get(this._albumUrl).map((response) => response.json());
   }
 }
